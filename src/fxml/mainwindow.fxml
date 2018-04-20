@@ -1,8 +1,48 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="controllers.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: #A2E4E4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.startcontroller">
+   <children>
+      <AnchorPane layoutY="118.0" prefHeight="580.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Button fx:id="startGame" layoutX="110.0" layoutY="141.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #6589D9;" text="Начать игру" AnchorPane.bottomAnchor="389.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="141.0">
+               <font>
+                  <Font name="KacstBook" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="aboutAthor" layoutX="110.0" layoutY="234.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #6589D9;" text="Об авторе" AnchorPane.bottomAnchor="296.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="234.0">
+               <font>
+                  <Font name="KacstBook" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="exit" layoutX="424.0" layoutY="540.0" mnemonicParsing="false" style="-fx-background-color: #6589D9;" text="Выход" textFill="#261717" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <Label layoutX="138.0" layoutY="14.0" prefHeight="81.0" prefWidth="216.0" text="Угадай число" AnchorPane.bottomAnchor="620.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.8942307692307693" endY="0.12019230769230771" startX="0.8894230769230769" startY="0.47596153846153844">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#c68787" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>
