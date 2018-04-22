@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="aboutAthourMain" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C6C5CA;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.aboutauthor">
+<AnchorPane fx:id="aboutAthourMain" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C6C5CA;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Aboutauthor">
    <children>
-      <Label layoutX="14.0" layoutY="12.0" prefHeight="38.0" prefWidth="235.0" text="Об авторе" textFill="#232ae8">
+      <Label layoutX="14.0" layoutY="12.0" prefHeight="45.0" prefWidth="203.0" text="Об авторе" textFill="#232ae8">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Hyperlink accessibleRole="BUTTON" layoutX="14.0" layoutY="362.0" prefHeight="24.0" prefWidth="235.0" text="www.yandex.ru" textFill="#140909">
+      <Hyperlink accessibleRole="BUTTON" layoutX="14.0" layoutY="362.0" prefHeight="24.0" prefWidth="235.0" text="www.blogitwin.ru" textFill="#140909">
          <font>
             <Font size="17.0" />
          </font>
@@ -31,7 +31,7 @@
          </effect>
       </ImageView>
       <TextArea editable="false" layoutX="14.0" layoutY="56.0" prefHeight="291.0" prefWidth="343.0" text="Привет, я Фадеев Артём, мне 35 лет.&#10;Я программист с сороколетним стажем.&#10;&#10;Написал куеву тучу программ, &#10;около 40 895 367 штук. Но из за очень низкой&#10;популярности и бесполезности этих &#10;программ, о них никто не&#10;знает.&#10;&#10;Я соавтор таких шлягеров как ютуб, &#10;майнкрафт, инстаграмм и др.&#10;Но обо мне никто никогда не пишет,&#10;так как у нас программистов так принято -&#10;лучших своих разработчиков &#10;нигде не упоминать.&#10;&#10;Наслаждайтесь игрой. Добра Вам." />
-      <ImageView fx:id="back" fitHeight="60.0" fitWidth="60.0" layoutX="454.0" layoutY="324.0" onMouseClicked="#backToTheMain" preserveRatio="true">
+      <ImageView fx:id="back" fitHeight="60.0" fitWidth="60.0" layoutX="465.0" layoutY="317.0" onMouseClicked="#backToTheMain" preserveRatio="true">
          <image>
             <Image url="@../assets/back.jpg" />
          </image>
