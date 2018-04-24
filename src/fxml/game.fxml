@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -10,7 +12,7 @@
    <children>
       <AnchorPane layoutX="10.0" layoutY="52.0" prefHeight="80.0" prefWidth="480.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="52.0">
          <children>
-            <TextArea fx:id="textConsole" editable="false" prefHeight="80.0" prefWidth="480.0" text="">
+            <TextArea fx:id="textConsole" editable="false" prefHeight="80.0" prefWidth="480.0" text="" wrapText="true">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -24,5 +26,18 @@
          <font>
             <Font name="DejaVu Serif Bold" size="32.0" />
          </font></Label>
+      <TextField fx:id="inputNum" alignment="CENTER" layoutX="179.0" layoutY="165.0" prefHeight="40.0" prefWidth="140.0" promptText="введите число" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0">
+         <font>
+            <Font name="Noto Sans CJK KR Medium" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnCheck" cache="true" cacheHint="QUALITY" layoutX="186.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: #40CF63;" text="Проверить" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="186.0">
+         <font>
+            <Font name="KacstArt" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

@@ -1,28 +1,33 @@
 package controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import objects.Randomnumber;
+import objects.Settings;
 
-public class Game {
-
-    final String welcomeText = "ZX-Spectrum 48 загадал число от 1 до 100, попробуй \n" +
-            "угадай его за меньшее количество попыток.";
+public class Game extends Settings {
 
     Randomnumber randomnumber = new Randomnumber();
-    private int guessNum = randomnumber.getGuessNum();
-    String text = Integer.toString(guessNum);
+    String guessNum = randomnumber.getGuessNum();
 
     @FXML
     private TextArea textConsole;
+
+    @FXML
+    private TextField inputNum;
+
+    @FXML
+    private Button btnCheck;
 
 
     @FXML
     void initialize() {
 
         textConsole.clear();
-        textConsole.appendText(welcomeText);
-        textConsole.appendText("Number: " + text);
+        textConsole.appendText(WELCOME_TEXT);
+        textConsole.appendText(NUM_ERROR);
 
     }
 }
