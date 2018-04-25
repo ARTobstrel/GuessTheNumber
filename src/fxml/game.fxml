@@ -31,7 +31,7 @@
             <Font name="Noto Sans CJK KR Medium" size="16.0" />
          </font>
       </TextField>
-      <Button fx:id="btnCheck" cache="true" cacheHint="QUALITY" layoutX="186.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: #40CF63;" text="Проверить" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="186.0">
+      <Button fx:id="btnCheck" cache="true" cacheHint="QUALITY" layoutX="186.0" layoutY="250.0" mnemonicParsing="false" onAction="#clickOnCheck" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: #40CF63;" text="Проверить" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="186.0">
          <font>
             <Font name="KacstArt" size="17.0" />
          </font>
