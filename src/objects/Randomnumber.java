@@ -12,10 +12,14 @@ public class Randomnumber {
     public Randomnumber() {
         this.ranNum = new Random();
         this.guessNum = ranNum.nextInt(101);
-        this.guessNumText = Integer.toString(guessNum);
+        this.guessNumText = Integer.toString(guessNum); //преобразование введеной строки в тип данных INT
     }
 
-    public String getGuessNum() {
+    public String getGuessNumString() {
         return guessNumText;
+    }
+
+    public int getGuessNumInt() {
+        return guessNum;
     }
 }
