@@ -1,6 +1,5 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -10,9 +9,9 @@ import objects.Settings;
 
 public class Game extends Settings {
 
-    Randomnumber randomnumber = new Randomnumber();
-    int guessNumInt = randomnumber.getGuessNumInt();
-    String guessNumString = randomnumber.getGuessNumString();
+    private Randomnumber randomnumber = new Randomnumber();
+    private int guessNumInt = randomnumber.getGuessNumInt();
+    private String guessNumString = randomnumber.getGuessNumString();
 
     @FXML
     private TextArea textConsole;
@@ -32,10 +31,9 @@ public class Game extends Settings {
 
     }
 
-    public void clickOnCheck(ActionEvent actionEvent) {
+    public void clickOnCheck() {
 
         //1 В этом методе идет проверка наличия введенного текста, if anything text is empty then input text-error
-        System.out.println(numberSet.size());
         if(inputNum.getText().isEmpty()) {
             textConsole.clear();
             textConsole.appendText(NUM_IS_NULL);
@@ -75,15 +73,17 @@ public class Game extends Settings {
             // введенное число соответствует загаданному
             numberSet.add(convertNum);//добавляем число в Set
             textConsole.clear();
+            inputNum.clear();
             textConsole.appendText(YOU_WIN);
             textConsole.appendText(guessNumString);
+            btnCheck.setDisable(true); //сделать кнопку не активной после выигрыша
         } else if(convertNum > guessNumInt) {
             // введенное число больше загаданного
             numberSet.add(convertNum);//добавляем число в Set
             textConsole.clear();
             textConsole.appendText(NUM_LESS); //меньше
             inputNum.clear();
-        } else if(convertNum < guessNumInt) {
+        } else {
             // введенное число меньше загаданного
             numberSet.add(convertNum);//добавляем число в Set
             textConsole.clear();

@@ -17,7 +17,7 @@
             <Font size="37.0" />
          </font>
       </Label>
-      <Hyperlink accessibleRole="BUTTON" layoutX="14.0" layoutY="362.0" prefHeight="24.0" prefWidth="235.0" text="www.blogitwin.ru" textFill="#140909">
+      <Hyperlink accessibleRole="BUTTON" layoutX="14.0" layoutY="362.0" onMouseClicked="#goToMySite" prefHeight="24.0" prefWidth="235.0" text="www.blogitwin.ru" textFill="#140909" visited="true">
          <font>
             <Font size="17.0" />
          </font>
