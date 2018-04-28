@@ -26,7 +26,7 @@
          <font>
             <Font name="DejaVu Serif Bold" size="32.0" />
          </font></Label>
-      <TextField fx:id="inputNum" alignment="CENTER" layoutX="179.0" layoutY="165.0" prefHeight="40.0" prefWidth="140.0" promptText="введите число" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0">
+      <TextField fx:id="inputNum" alignment="CENTER" layoutX="180.0" layoutY="185.0" prefHeight="40.0" prefWidth="140.0" promptText="введите число" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0">
          <font>
             <Font name="Noto Sans CJK KR Medium" size="16.0" />
          </font>

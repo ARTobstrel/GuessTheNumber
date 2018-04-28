@@ -11,7 +11,8 @@ import objects.Settings;
 public class Game extends Settings {
 
     Randomnumber randomnumber = new Randomnumber();
-    int guessNum = randomnumber.getGuessNumInt();
+    int guessNumInt = randomnumber.getGuessNumInt();
+    String guessNumString = randomnumber.getGuessNumString();
 
     @FXML
     private TextArea textConsole;
@@ -70,18 +71,19 @@ public class Game extends Settings {
 
         //4 В этом методе проверяем введенное число на соответствие загаданному числу
 
-        if(convertNum == guessNum ) {
+        if(convertNum == guessNumInt) {
             // введенное число соответствует загаданному
             numberSet.add(convertNum);//добавляем число в Set
             textConsole.clear();
             textConsole.appendText(YOU_WIN);
-        } else if(convertNum > guessNum) {
+            textConsole.appendText(guessNumString);
+        } else if(convertNum > guessNumInt) {
             // введенное число больше загаданного
             numberSet.add(convertNum);//добавляем число в Set
             textConsole.clear();
             textConsole.appendText(NUM_LESS); //меньше
             inputNum.clear();
-        } else if(convertNum < guessNum) {
+        } else if(convertNum < guessNumInt) {
             // введенное число меньше загаданного
             numberSet.add(convertNum);//добавляем число в Set
             textConsole.clear();
@@ -89,6 +91,22 @@ public class Game extends Settings {
             inputNum.clear();
         }
 
+        displayNumbers();
+
+    }
+
+    private void displayNumbers() {
+
+        //5 Данный метод отображает введенные цифры в специальном окне
+        textConsole.appendText("\n" + ENTERED_NUMBERS);
+        int counter = 0;
+        for(int x : numberSet) {
+            String s = Integer.toString(x);
+            textConsole.appendText(s + ", ");
+            counter += 1;
+        }
+        String counterString = Integer.toString(counter);
+        textConsole.appendText("\n" + COUNTER + counterString);
     }
 
 
